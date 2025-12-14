@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Data Preview</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div class="container">
+    <h2>Data Preview</h2>
+
+    <table>
+        <tr>
+            {% for h in headers %}
+            <th>{{ h }}</th>
+            {% endfor %}
+        </tr>
+
+        {% for row in data %}
+        <tr>
+            {% for cell in row %}
+            <td>{{ cell }}</td>
+            {% endfor %}
+        </tr>
+        {% endfor %}
+    </table>
+
+    <br>
+    <a href="/">Upload Another File</a>
+</div>
+
+</body>
+</html>
